@@ -13,6 +13,14 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'dAdria' : '#1e6ba3',
+        'mAdria' : '#4199df',
+        'lAdria' : '#6ecef7',
+        'oAdria' : '#ffe36c',
+        '+dAdria' : '#2e415b',
+        'sAdria' : '#313d34',
+      }
     },
   },
   plugins: [],
