@@ -10,7 +10,7 @@ import {FcGoogle} from 'react-icons/fc'
 
 import { useState, useEffect } from "react"
 
-export default function HeroImg () {
+export default function HeroImg ( {dropdown} : any ) {
     const [tabNumber, setTabNumber] = useState(1)
 
     useEffect(() => {
@@ -26,7 +26,7 @@ export default function HeroImg () {
       }, []);
 
     return (
-        <div className="w-full h-full relative overflow-hidden">
+        <div className={`${dropdown ? 'pixel' : ''} w-full h-full relative overflow-hidden`}>
             <div className="z-0 absolute w-full h-full">
             <Image
             src="/more.jpg"
@@ -38,7 +38,7 @@ export default function HeroImg () {
             </div>
           <div className="z-10 absolute p-9 w-full h-full">
             <div className="w-full h-full flex justify-center items-center">
-                <div className="w-1/2 h-full">
+                <div className="lg:w-1/2 w-full h-full">
                     <div className="w-full h-full rounded-lg bg-white shadow-md shadow-dAdria p-4 flex flex-col gap-1 items-center justify-center">
                         <div className="w-full h-1/2 flex justify-between items-center">
                             <div className="flex flex-col justify-center items-center p-2">
@@ -62,34 +62,34 @@ export default function HeroImg () {
                             </div> 
                         </div>
 
-                        <div className="w-full h-1/2 bg-yellow-500 flex justify-evenly items-center p-5 gap-2">
-                            <div className="w-full h-1/2 flex gap-2 justify-center items-center bg-white rounded-md p-3">
-                                <figure className="w-1/5 h-full text-gray-500 flex items-center text-xl"><MdLocationPin /></figure> 
-                                <p className="text-gray-500 font-semibold text-xl flex items-center w-4/5">Mjesto</p>
+                        <div className="w-full h-1/2 bg-yellow-500 flex lg:justify-evenly justify-center lg:flex-row items-center p-5 gap-2">
+                            <div className="w-fit h-1/2 flex gap-2 justify-center items-center bg-white rounded-md p-3">
+                                <figure className="lg:w-1/5 w-full h-full text-gray-500 flex items-center text-xl"><MdLocationPin /></figure> 
+                                <p className="text-gray-500 font-semibold lg:text-xl text-sm lg:flex items-center w-4/5 hidden">Mjesto</p>
                             </div> 
 
-                            <div className="w-full h-1/2 flex gap-2 justify-center items-center bg-white rounded-md p-3">
-                                <figure className="w-1/5 h-full text-gray-500 flex items-center text-xl"><BsFillCalendar2RangeFill /></figure> 
-                                <p className="text-gray-500 font-semibold text-xl flex items-center w-4/5">Dolazak</p>
+                            <div className="w-fit h-1/2 flex gap-2 justify-center items-center bg-white rounded-md p-3">
+                                <figure className="lg:w-1/5 w-full h-full text-gray-500 flex items-center text-xl"><BsFillCalendar2RangeFill /></figure> 
+                                <p className="text-gray-500 font-semibold lgtext-xl text-sm lg:flex items-center w-4/5 hidden">Dolazak</p>
                             </div> 
 
-                            <div className="w-full h-1/2 flex gap-2 justify-center items-center bg-white rounded-md p-3">
-                                <figure className="w-1/5 h-full text-gray-500 flex items-center text-xl"><BsFillCalendar2RangeFill /></figure> 
-                                <p className="text-gray-500 font-semibold text-xl flex items-center w-4/5">Odlazak</p>
+                            <div className="w-fit h-1/2 flex gap-2 justify-center items-center bg-white rounded-md p-3">
+                                <figure className="lg:w-1/5 w-full h-full text-gray-500 flex items-center text-xl"><BsFillCalendar2RangeFill /></figure> 
+                                <p className="text-gray-500 font-semibold lg:text-xl text-sm lg:flex items-center w-4/5 hidden">Odlazak</p>
                             </div> 
 
-                            <div className="w-full h-1/2 flex gap-2 justify-center items-center bg-white rounded-md p-3">
-                                <figure className="w-1/5 h-full text-gray-500 flex items-center text-xl"><BsFillPersonCheckFill /></figure> 
-                                <p className="text-gray-500 font-semibold text-xl flex items-center w-4/5">Osobe</p>
+                            <div className="w-fit h-1/2 flex gap-2 justify-center items-center bg-white rounded-md p-3">
+                                <figure className="lg:w-1/5 w-full h-full text-gray-500 flex items-center text-xl"><BsFillPersonCheckFill /></figure> 
+                                <p className="text-gray-500 font-semibold lg:text-xl text-sm lg:flex items-center w-4/5 hidden">Osobe</p>
                             </div> 
 
-                            <div className="w-full h-1/2 flex gap-2 justify-center items-center bg-dAdria rounded-md hover:bg-+dAdria hover:cursor-pointer">
-                                <figure className="w-full h-full text-3xl text-white font-bold flex justify-center items-center"><BsSearch /></figure>
+                            <div className="lg:w-full w-1/5 h-1/2 flex gap-2 justify-center items-center bg-dAdria rounded-md hover:bg-+dAdria hover:cursor-pointer">
+                                <figure className="w-full h-full lg:text-3xl text-sm text-white font-bold flex justify-center items-center"><BsSearch /></figure>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2 h-full p-10 flex justify-center items-center">
+                <div className="hidden w-1/2 h-full p-10 lg:flex justify-center items-center">
                     <div className="bg-sAdria w-full h-full rounded-md bg-opacity-50 flex justify-center items-center">
                         <div className="w-2/3 h-2/3 flex justify-center items-center p-2">
                         

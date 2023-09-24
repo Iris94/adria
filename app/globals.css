@@ -7,4 +7,11 @@
     color: white;
   }
 
+.menu-large {
+  font-size: 4vmin;
+  color: white;
+}
 
+.pixel {
+  filter: blur(5px);
+}
